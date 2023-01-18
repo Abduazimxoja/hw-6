@@ -1,0 +1,469 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active,
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+@font-face {
+  font-family: zero;
+  src: url(../font/Booter\ -\ Zero\ Zero.woff);
+}
+body {
+  font-family: Raleway, sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.container--h {
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0%, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.header__list {
+  height: 60px;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.header__link {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.913);
+  font-size: 18px;
+}
+.header__link:hover {
+  color: #fff;
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  background: center/no-repeat;
+  background-size: cover;
+  background-image: url(../img/background.jpg);
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+}
+.intro--bgnone {
+  height: 400px;
+}
+.intro__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.intro__title {
+  cursor: default;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: calc(100px + 100 * (100vw - 320px) / 960);
+  font-family: zero, sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+.intro__button {
+  width: 550px;
+  height: 90px;
+  font-size: 30px;
+  color: #fff;
+  border: 1px solid rgb(255, 255, 255);
+  margin-bottom: 100px;
+}
+.intro__button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.intro__play {
+  width: 150px;
+  height: 150px;
+  background: url(../img/play.svg) center/cover no-repeat;
+  margin-left: 50%;
+  border-radius: 50%;
+}
+.intro__play:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tours {
+  margin: 75px 0 70px 0;
+}
+.tours__title {
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Metal Mania", sans-serif;
+  font-weight: 400;
+  font-size: 55px;
+  cursor: default;
+}
+.tours__block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0 25px;
+  font-size: 20px;
+  border-bottom: 1px solid #949395;
+}
+.tours__block:nth-last-child(1) {
+  border-bottom: none;
+}
+.tours__date {
+  font-size: 20px;
+}
+.tours__none {
+  color: #949395;
+}
+.tours__btn {
+  padding: 14px 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #73caf7;
+  border-radius: 10px;
+}
+.tours__btn:hover {
+  background-color: #67b6de;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+}
+.square--red {
+  background: #fd9ab7;
+}
+.square--blue {
+  background: #72ceff;
+}
+.square--purple {
+  background: #af6ac1;
+}
+.square--green {
+  background: #6cc175;
+}
+
+.task {
+  display: inline-block;
+  font-family: sans-serif;
+  width: 350px;
+  height: 450px;
+  padding: 20px 16px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin-bottom: 80px;
+}
+.task__text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0 40px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.task__title {
+  cursor: default;
+  font-size: 26px;
+}
+.task__remain {
+  cursor: default;
+  font-size: 20px;
+}
+.task__block {
+  height: 300px;
+  margin: 25px 0 0px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.task__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task__input--chb {
+  cursor: pointer;
+}
+.task__input--text {
+  width: 250px;
+  padding: 15px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+.task__lable {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.task__btn {
+  padding: 10px 18px;
+  border: 1px solid rgb(241, 241, 241);
+  border-radius: 18px;
+}
+.task__btn:hover {
+  background: rgb(241, 241, 241);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.login {
+  height: 450px;
+  display: inline-block;
+  padding: 25px 35px 15px 35px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin-bottom: 80px;
+}
+.login__block {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.login__ava {
+  width: 60px;
+  height: 60px;
+  background: url(../img/avatar.svg) center/cover no-repeat;
+  margin: 0 auto;
+}
+.login__form {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.login__email, .login__password {
+  width: 210px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #000;
+}
+.login__submit {
+  font-weight: 700;
+  color: #fff;
+  padding: 15px 50px;
+  background: #77c4d4;
+  border-radius: 5px;
+}
+.login__submit:hover {
+  background: #6eb6c5;
+}
+.login__link {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  color: #77c4d4;
+}
+
+.brad {
+  margin-bottom: 80px;
+}
+.brad__title {
+  padding: 16px 0;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  border: 1px solid #c8c8c8;
+  cursor: default;
+}
+.brad__wrap {
+  height: 100%;
+  overflow-y: auto;
+}
+.brad__wrap::-webkit-scrollbar {
+  width: 6px; /* ширина всей полосы прокрутки */
+}
+.brad__wrap::-webkit-scrollbar-track {
+  background: #e7e7e7; /* цвет зоны отслеживания */
+}
+.brad__wrap::-webkit-scrollbar-thumb {
+  background-color: #73caf7; /* цвет бегунка */
+  border-radius: 3px; /* округлось бегунка */
+}
+.brad__indent {
+  width: 100%;
+  height: 400px;
+  padding: 40px 20px 40px 0px;
+  border: 1px solid #c8c8c8;
+  border-top: none;
+}
+.brad__block {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.brad__object-ease-1 {
+  border-radius: 50px 0 0 0;
+}
+.brad__object-ease-2 {
+  border-radius: 0px 50px 0px 0px;
+}
+.brad__object-ease-3 {
+  border-radius: 0px 0px 50px 0px;
+}
+.brad__object-ease-4 {
+  border-radius: 0px 0px 0px 50px;
+}
+.brad__object-normal-1 {
+  border-radius: 20%;
+}
+.brad__object-normal-2 {
+  border-radius: 30%;
+}
+.brad__object-normal-3 {
+  border-radius: 40%;
+}
+.brad__object-normal-4 {
+  border-radius: 50%;
+}
+.brad__object-hard-1 {
+  border-radius: 25px 0;
+}
+.brad__object-hard-2 {
+  border-radius: 50px 0;
+}
+.brad__object-hard-3 {
+  border-radius: 75px 0;
+}
+.brad__object-hard-4 {
+  border-radius: 100px 0;
+}
+.brad__object-harder-1 {
+  border-radius: 50% 20%/40% 30%;
+}
+.brad__object-harder-2 {
+  border-radius: 30% 50%/70% 30%;
+}
+.brad__object-harder-3 {
+  border-radius: 40% 0%/80% 10%;
+}
+.brad__object-harder-4 {
+  border-radius: 50% 20%/20% 40%;
+}
+
+.footer {
+  height: 120px;
+  background-color: #73caf7;
+}
+.footer__block {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__title {
+  font-size: 90px;
+  font-family: "Metal Mania", sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+.footer__icon {
+  margin-left: 25px;
+}
+
+.about {
+  margin: 75px 0 70px 0;
+}
+.about__title {
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Metal Mania", sans-serif;
+  font-weight: 400;
+  font-size: 55px;
+  cursor: default;
+}
+.about__photo {
+  border-radius: 50%;
+  float: left;
+}
+.about__deskribe {
+  color: rgb(123, 123, 123);
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+}

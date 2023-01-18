@@ -1,0 +1,496 @@
+@import "nullstyle";
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+@font-face {
+   font-family: zero;
+   src: url(../font/Booter\ -\ Zero\ Zero.woff);
+}
+
+// --body----------------------------------------------------
+body {
+   font-family: Raleway, sans-serif;
+}
+
+// --container-----------------------------------------------
+.container {
+   max-width: 1280px;
+   margin: 0 auto;
+   padding: 0 40px;
+   &--h {
+      height: 100%;
+   }
+}
+
+// --Header-------------------------------------------------
+.header {
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translate3d(-50%, 0%, 0);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+   &__menu {
+   }
+
+   &__list {
+      height: 60px;
+      align-items: center;
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__link {
+      text-transform: uppercase;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.913);
+      font-size: 18px;
+      &:hover {
+         color: #fff;
+      }
+   }
+}
+
+// --intro--------------------------------------------------
+.intro {
+   width: 100%;
+   height: 100vh;
+   background: center / no-repeat;
+   background-size: cover;
+   background-image: url(../img/background.jpg);
+   background-color: rgba(0, 0, 0, 0.6);
+   background-blend-mode: multiply;
+   &--bgnone {
+      height: 400px;
+   }
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+   }
+   &__title {
+      cursor: default;
+      margin-bottom: 40px;
+
+      text-align: center;
+      font-size: calc(100px + 100 * ((100vw - 320px) / (1280 - 320)));
+      font-family: zero, sans-serif;
+      font-weight: 400;
+      color: #fff;
+   }
+
+   &__button {
+      width: 550px;
+      height: 90px;
+      font-size: 30px;
+
+      color: #fff;
+      border: 1px solid rgb(255, 255, 255);
+      margin-bottom: 100px;
+      &:hover {
+         background-color: rgba(255, 255, 255, 0.1);
+      }
+   }
+
+   &__play {
+      width: 150px;
+      height: 150px;
+      background: url(../img/play.svg) center / cover no-repeat;
+      margin-left: 50%;
+      border-radius: 50%;
+      &:hover {
+         background-color: rgba(255, 255, 255, 0.1);
+      }
+   }
+}
+
+// --tours--------------------------------------------------
+.tours {
+   margin: 75px 0 70px 0;
+   &__container {
+   }
+
+   &__title {
+      margin-bottom: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "Metal Mania", sans-serif;
+      font-weight: 400;
+      font-size: 55px;
+      cursor: default;
+   }
+
+   &__block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 30px 0 25px;
+      font-size: 20px;
+      border-bottom: 1px solid #949395;
+      &:nth-last-child(1) {
+         border-bottom: none;
+      }
+   }
+
+   &__date {
+      font-size: 20px;
+   }
+
+   &__none {
+      color: #949395;
+   }
+
+   &__btn {
+      padding: 14px 6px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      background-color: #73caf7;
+      border-radius: 10px;
+      &:hover {
+         background-color: #67b6de;
+      }
+   }
+}
+
+// --square--------------------------------------------------
+.square {
+   width: 100px;
+   height: 100px;
+   &--red {
+      background: #fd9ab7;
+   }
+
+   &--blue {
+      background: #72ceff;
+   }
+
+   &--purple {
+      background: #af6ac1;
+   }
+
+   &--green {
+      background: #6cc175;
+   }
+}
+
+// --task--------------------------------------------------
+.task {
+   display: inline-block;
+   font-family: sans-serif;
+   width: 350px;
+   height: 450px;
+   padding: 20px 16px;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+   border-radius: 20px;
+   margin-bottom: 80px;
+   &__text {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px 0 40px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   }
+
+   &__title {
+      cursor: default;
+
+      font-size: 26px;
+   }
+
+   &__remain {
+      cursor: default;
+
+      font-size: 20px;
+   }
+
+   &__block {
+      height: 300px;
+      margin: 25px 0 0px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   &__form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__inner {
+   }
+
+   &__chekbox {
+   }
+
+   &__input {
+      &--chb {
+         cursor: pointer;
+      }
+      &--text {
+         width: 250px;
+         padding: 15px 8px;
+         border: 1px solid rgba(0, 0, 0, 0.1);
+         border-radius: 30px;
+      }
+   }
+
+   &__lable {
+      margin-left: 10px;
+      cursor: pointer;
+   }
+
+   &__btn {
+      padding: 10px 18px;
+      border: 1px solid rgb(241, 241, 241);
+      border-radius: 18px;
+      &:hover {
+         background: rgb(241, 241, 241);
+      }
+   }
+}
+
+// --wrapper--------------------------------------------------
+.wrapper {
+   display: flex;
+   justify-content: space-around;
+}
+// --login--------------------------------------------------
+.login {
+   height: 450px;
+   display: inline-block;
+   padding: 25px 35px 15px 35px;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+   border-radius: 10px;
+   margin-bottom: 80px;
+   &__block {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+   &__ava {
+      width: 60px;
+      height: 60px;
+      background: url(../img/avatar.svg) center / cover no-repeat;
+      margin: 0 auto;
+   }
+
+   &__form {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-bottom: 50px;
+   }
+
+   &__email,
+   &__password {
+      width: 210px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid #000;
+   }
+   &__email {
+   }
+
+   &__password {
+   }
+
+   &__submit {
+      font-weight: 700;
+      color: #fff;
+      padding: 15px 50px;
+      background: #77c4d4;
+      border-radius: 5px;
+      &:hover {
+         background: #6eb6c5;
+      }
+   }
+
+   &__link {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      color: #77c4d4;
+   }
+}
+
+// --brad--------------------------------------------------
+.brad {
+   margin-bottom: 80px;
+   &__title {
+      padding: 16px 0;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #000000;
+      border: 1px solid #c8c8c8;
+      cursor: default;
+   }
+
+   &__wrap {
+      height: 100%;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+         width: 6px; /* ширина всей полосы прокрутки */
+      }
+      &::-webkit-scrollbar-track {
+         background: #e7e7e7; /* цвет зоны отслеживания */
+      }
+      &::-webkit-scrollbar-thumb {
+         background-color: #73caf7; /* цвет бегунка */
+         border-radius: 3px; /* округлось бегунка */
+         // border: 3px solid #72CEFF; /* отступ вокруг бегунка */
+      }
+   }
+
+   &__indent {
+      width: 100%;
+      height: 400px;
+      padding: 40px 20px 40px 0px;
+      border: 1px solid #c8c8c8;
+      border-top: none;
+   }
+   &__block {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 50px;
+   }
+
+   &__object-ease-1 {
+      border-radius: 50px 0 0 0;
+   }
+
+   &__object-ease-2 {
+      border-radius: 0px 50px 0px 0px;
+   }
+
+   &__object-ease-3 {
+      border-radius: 0px 0px 50px 0px;
+   }
+
+   &__object-ease-4 {
+      border-radius: 0px 0px 0px 50px;
+   }
+
+   &__object-normal-1 {
+      border-radius: 20%;
+   }
+
+   &__object-normal-2 {
+      border-radius: 30%;
+   }
+
+   &__object-normal-3 {
+      border-radius: 40%;
+   }
+
+   &__object-normal-4 {
+      border-radius: 50%;
+   }
+
+   &__object-hard-1 {
+      border-radius: 25px 0;
+   }
+
+   &__object-hard-2 {
+      border-radius: 50px 0;
+   }
+
+   &__object-hard-3 {
+      border-radius: 75px 0;
+   }
+
+   &__object-hard-4 {
+      border-radius: 100px 0;
+   }
+
+   &__object-harder-1 {
+      border-radius: 50% 20% / 40% 30%;
+   }
+
+   &__object-harder-2 {
+      border-radius: 30% 50% / 70% 30%;
+   }
+
+   &__object-harder-3 {
+      border-radius: 40% 0% / 80% 10%;
+   }
+
+   &__object-harder-4 {
+      border-radius: 50% 20% / 20% 40%;
+   }
+}
+
+// --footer-------------------------------------------------
+.footer {
+   height: 120px;
+   background-color: #73caf7;
+   &__block {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__title {
+      font-size: 90px;
+      font-family: "Metal Mania", sans-serif;
+      font-weight: 400;
+      color: #fff;
+   }
+
+   &__social {
+   }
+
+   &__link {
+   }
+
+   &__icon {
+      margin-left: 25px;
+   }
+}
+
+// --about-------------------------------------------------
+
+.about {
+   margin: 75px 0 70px 0;
+   &__title {
+      margin-bottom: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "Metal Mania", sans-serif;
+      font-weight: 400;
+      font-size: 55px;
+      cursor: default;
+   }
+
+   &__block {
+   }
+
+   &__photo {
+      border-radius: 50%;
+      float: left;
+   }
+
+   &__deskribe {
+      color: rgb(123, 123, 123);
+      font-size: 25px;
+      line-height: 30px;
+      letter-spacing: 2px;
+      word-spacing: 10px;
+   }
+}
+
+
+
+// filter: blur(10px);
+//  border-radius: 15px;
